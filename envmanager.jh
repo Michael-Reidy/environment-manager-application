@@ -1,0 +1,59 @@
+entity Environment {
+	name String,
+    startDate Instant,
+	endDate Instant
+}
+
+entity LogicalLocation {
+	name String,
+}
+
+entity Namespace {
+	name String
+}
+
+entity Setting {
+	name String,
+	valueType ValueType,
+    expressionType ExpressionType,
+	value String
+}
+
+enum ExpressionType {
+    SIMPLE, COMPLEX
+}
+
+enum ValueType {
+    BOOLEAN, STRING, INT, LONG, FLOAT, DOUBLE
+}
+
+relationship OneToMany {
+	Environment{contains} to Namespace
+}
+
+relationship OneToMany {
+	Environment{appliesTo} to LogicalLocation
+}
+
+relationship OneToOne {
+	Environment{inheritsFrom} to Environment
+}
+
+relationship OneToMany {
+	Namespace{composedOf} to Namespace
+}
+
+relationship OneToMany {
+	Namespace{contains} to Setting
+}
+
+// Set pagination options
+paginate Environment, Namespace, Setting, LogicalLocation with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except ValueType, ExpressionType
+
+// Set an angular suffix
+angularSuffix * with mySuffix
