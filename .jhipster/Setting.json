@@ -1,0 +1,42 @@
+{
+  "angularJSSuffix": "mySuffix",
+  "applications": "*",
+  "changelogDate": "20230222225038",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "setting",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valueType",
+      "fieldType": "ValueType",
+      "fieldValues": "BOOLEAN,STRING,INT,LONG,FLOAT,DOUBLE"
+    },
+    {
+      "fieldName": "expressionType",
+      "fieldType": "ExpressionType",
+      "fieldValues": "SIMPLE,COMPLEX"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Setting",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "namespace",
+      "otherEntityRelationshipName": "contains",
+      "relationshipName": "namespace",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

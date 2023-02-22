@@ -1,0 +1,9 @@
+{
+  "environmentManagerApplicationApp": {
+    "ExpressionType": {
+      "null": "",
+      "SIMPLE": "SIMPLE",
+      "COMPLEX": "COMPLEX"
+    }
+  }
+}

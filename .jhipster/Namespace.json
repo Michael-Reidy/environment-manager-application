@@ -1,0 +1,46 @@
+{
+  "angularJSSuffix": "mySuffix",
+  "applications": "*",
+  "changelogDate": "20230222225037",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "namespace",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Namespace",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "namespace",
+      "otherEntityRelationshipName": "namespace",
+      "relationshipName": "composedOf",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "setting",
+      "otherEntityRelationshipName": "namespace",
+      "relationshipName": "contains",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "contains",
+      "relationshipName": "environment",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "namespace",
+      "otherEntityRelationshipName": "composedOf",
+      "relationshipName": "namespace",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
