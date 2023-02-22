@@ -1,0 +1,26 @@
+{
+  "environmentManagerApplicationApp": {
+    "logicalLocation": {
+      "home": {
+        "title": "Logical Locations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Logical Location",
+        "createOrEditLabel": "Create or edit a Logical Location",
+        "search": "Search for Logical Location",
+        "notFound": "No Logical Locations found"
+      },
+      "created": "A new Logical Location is created with identifier {{ param }}",
+      "updated": "A Logical Location is updated with identifier {{ param }}",
+      "deleted": "A Logical Location is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Logical Location {{ id }}?"
+      },
+      "detail": {
+        "title": "Logical Location"
+      },
+      "id": "ID",
+      "name": "Name",
+      "environment": "Environment"
+    }
+  }
+}

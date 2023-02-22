@@ -1,0 +1,48 @@
+{
+  "angularJSSuffix": "mySuffix",
+  "applications": "*",
+  "changelogDate": "20230222225035",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "environment",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Environment",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "environment",
+      "ownerSide": true,
+      "relationshipName": "inheritsFrom",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "namespace",
+      "otherEntityRelationshipName": "environment",
+      "relationshipName": "contains",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "logicalLocation",
+      "otherEntityRelationshipName": "environment",
+      "relationshipName": "appliesTo",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,30 @@
+{
+  "environmentManagerApplicationApp": {
+    "environment": {
+      "home": {
+        "title": "Environments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Environment",
+        "createOrEditLabel": "Create or edit a Environment",
+        "search": "Search for Environment",
+        "notFound": "No Environments found"
+      },
+      "created": "A new Environment is created with identifier {{ param }}",
+      "updated": "A Environment is updated with identifier {{ param }}",
+      "deleted": "A Environment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Environment {{ id }}?"
+      },
+      "detail": {
+        "title": "Environment"
+      },
+      "id": "ID",
+      "name": "Name",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "inheritsFrom": "Inherits From",
+      "contains": "Contains",
+      "appliesTo": "Applies To"
+    }
+  }
+}
